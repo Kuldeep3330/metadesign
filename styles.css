@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    background: #fafafa;
+    color: #222;
+    -webkit-font-smoothing: antialiased
+}
+
+.max-width-card {
+    max-width: 420px
+}
+
+.activity-card {
+    border: 3px solid #2a8ec9;
+    border-radius: 6px;
+    overflow: hidden
+}
+
+.activity-card .card-header {
+    background: transparent;
+    padding: 18px 20px
+}
+
+.activity-card .card-header h2 {
+    color: #b7b929;
+    font-weight: 700;
+    font-size: 1.25rem
+}
+
+.activity-card .card-header .add-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(183, 185, 41, 0.08);
+    border: none;
+    color: #b7b929;
+    font-size: 1.1rem
+}
+
+.activity-card .list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 18px
+}
+
+.activity-card .list-group-item .activity-main {
+    flex: 1
+}
+
+.activity-card .list-group-item .activity-main .activity-title {
+    font-weight: 700;
+    font-size: 1.05rem
+}
+
+.activity-card .list-group-item .activity-main .activity-meta {
+    font-size: 0.9rem;
+    margin-top: 6px;
+    color: #6c757d
+}
+
+.activity-card .list-group-item .activity-actions {
+    margin-left: 12px
+}
+
+.activity-card .list-group-item .activity-actions .done-indicator {
+    color: transparent;
+    border: none;
+    display: none;
+    font-size: 1.1rem;
+    margin-right: 6px
+}
+
+.activity-card .list-group-item .activity-actions .ellipsis-btn {
+    color: #b7b929;
+    font-size: 1.1rem
+}
+
+.activity-card .list-group-item.is-done .activity-title {
+    text-decoration: line-through;
+    color: #6c757d
+}
+
+.activity-card .list-group-item.is-done .done-indicator {
+    display: inline-block;
+    color: #b7b929
+}
+
+.modal-header-custom {
+    background: #b7b929;
+    color: #fff;
+    border-bottom: none
+}
+
+.modal-header-custom .modal-title {
+    font-weight: 700
+}
+
+.dropdown-menu {
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15)
+}
+
+@media (min-width:992px) {
+    .max-width-card {
+        margin-left: 0
+    }
+}
+
+.btn-link {
+    text-decoration: none;
+    color: inherit
+}
