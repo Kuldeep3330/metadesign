@@ -1,10 +1,8 @@
-$brand-green: #b7b929; 
+$brand-green: #b7b929;
 $muted-grey: #6c757d;
-$card-border: #2a8ec9; 
-$bg-white: #ffffff;
-$max-width: 420px;
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+$card-border: #2a8ec9;
+$bg-light: #fafafa;
+$text-dark: #222;
 
 * {
   box-sizing: border-box;
@@ -12,15 +10,17 @@ $max-width: 420px;
 
 body {
   font-family: 'Lato', Arial, sans-serif;
-  background: #fafafa;
-  color: #222;
-  -webkit-font-smoothing: antialiased;
+  background: $bg-light;
+  color: $text-dark;
 }
 
 .max-width-card {
-  max-width: $max-width;
-}
+  max-width: 420px;
 
+  @media (min-width: 992px) {
+    margin-left: 0;
+  }
+}
 
 .activity-card {
   border: 3px solid $card-border;
@@ -28,20 +28,18 @@ body {
   overflow: hidden;
 
   .card-header {
-    background: transparent;
     padding: 18px 20px;
+
     h2 {
       color: $brand-green;
       font-weight: 700;
       font-size: 1.25rem;
     }
+
     .add-btn {
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
       background: rgba($brand-green, 0.08);
       border: none;
       color: $brand-green;
@@ -50,17 +48,14 @@ body {
   }
 
   .list-group-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 16px 18px;
 
     .activity-main {
-      flex: 1;
       .activity-title {
         font-weight: 700;
         font-size: 1.05rem;
       }
+
       .activity-meta {
         font-size: 0.9rem;
         margin-top: 6px;
@@ -70,13 +65,14 @@ body {
 
     .activity-actions {
       margin-left: 12px;
+
       .done-indicator {
-        color: transparent;
         border: none;
         display: none;
         font-size: 1.1rem;
         margin-right: 6px;
       }
+
       .ellipsis-btn {
         color: $brand-green;
         font-size: 1.1rem;
@@ -85,9 +81,9 @@ body {
 
     &.is-done {
       .activity-title {
-        text-decoration: line-through;
         color: $muted-grey;
       }
+
       .done-indicator {
         display: inline-block;
         color: $brand-green;
@@ -100,24 +96,27 @@ body {
   background: $brand-green;
   color: #fff;
   border-bottom: none;
+
   .modal-title {
     font-weight: 700;
   }
 }
 
-
 .dropdown-menu {
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 992px) {
-  .max-width-card {
-    margin-left: 0;
-  }
+.form-control {
+  border: none;
+  border-bottom: 0.5px solid $muted-grey;
 }
 
 .btn-link {
   text-decoration: none;
   color: inherit;
+}
+
+.manage{
+  height:120px;
 }

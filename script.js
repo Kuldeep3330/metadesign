@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
   const activitiesList = document.getElementById('activitiesList');
   const activityForm = document.getElementById('activityForm');
@@ -7,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   //create list item element
   function createActivityElement({ title, meta }) {
     const li = document.createElement('li');
-    li.className = 'list-group-item activity-item d-flex align-items-center justify-content-between';
+    li.className = 'list-group-item activity-item d-flex align-items-center justify-content-between manage';
 
     li.innerHTML = `
       <div class="activity-main">
@@ -51,12 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
     return li;
   }
 
-
+/////
   activityForm.addEventListener('submit', function (e) {
     e.preventDefault();
     const fullName = document.getElementById('fullName').value.trim();
     const nick = document.getElementById('nickName').value.trim();
-    const date = document.getElementById('dateOfBirth').value.trim();
+    const date = document.getElementById('dateOfBirth').value;
 
     // Choose values
     const title = nick || fullName || 'New Activity';
